@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    background-image: url("../img/paisagem.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 3300px;
+    position: relative;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* #153140 */
+
+header.container{
+    width: 100vw;
+    height: 140px;
+    background-color: #0D1F2D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container .logo{
+    font-size: 5.5rem;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+}
+
+.container .menu{
+    background-color: #0D1F2D;
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+    position: fixed;
+    margin-right: 6rem;
+    right: 0;
+    z-index: 20;
+}
+
+.container .menu nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.container .menu nav ul li a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: "Roboto";
+    transition: 0.1s all ease-in-out;
+}
+
+.container .menu nav ul li a:hover{
+    border-bottom: 3px solid white;
+}
+
+/* MAIN */
+
+main{
+    width: 100%;
+}
+
+main h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    padding: 50px;
+    color: white;
+} 
+main section{
+    width: 100%;
+}
+main .texto{
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Poppins";
+}
+
+/* HOME */
+
+main .home{
+    margin-top: 100px;
+    height: 700px;
+    background-color: rgba(48, 114, 140, 0.53);
+}
+
+
+
+main .home .texto{
+    width: 40%;
+    margin: 0 auto;
+}
+
+/* SERVIÇOS */
+
+main .servicos{
+    height: 700px;
+    background-color: rgba(6, 42, 64, 0.61);
+}
+
+main .servicos .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .servicos .container .servico{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #10A694;
+    width: 250px;
+    height: 310px;
+    border-radius: 6px;
+}
+
+main .servicos .servico img{
+    margin: 0 auto;
+    width: 60%;
+}
+
+main .servicos .servico span{
+    font-size: 2.4rem;
+    font-family: "Poppins";
+    text-align: center;
+    width: 60%;
+}
+
+/* ESTUDOS */
+
+main .estudos{
+    height: 700px;
+    background-color: rgba(14, 0, 70, 0.57);
+}
+
+main .estudos .container{
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main .estudos .texto{
+    width: 40%;
+}
+
+main .estudos .linguagens{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 250px;
+    width: 30%;
+}
+
+main .estudos .linguagens img{
+    width: 100%;
+}
+
+/* PROJETOS */
+
+main .projetos{
+    height: 700px;
+    background-color: #2E688C;
+}
+
+main .projetos .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+}
+
+main .projetos .texto{
+    width: 30%;
+}
+
+main .projetos .linha{
+    width: 1px;
+    height: 350px;
+    background-color: rgb(150, 150, 150);
+}
+
+main .projetos .slider{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .projetos .slide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 280px;
+}
+
+main .projetos .lista li{
+    list-style: none;
+}
+
+main .projetos .imagens{
+    height: 250px;
+    width: 500px;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    left: 0;
+    border-radius: 10px;
+    transition: .4s all ease-in-out;
+    cursor: pointer;
+}
+
+main .projetos #img2{
+    top: -135px;
+    opacity: 0;
+    z-index: -2;
+}
+main .projetos #img1{
+    top: 117px;
+    opacity: 1;
+    z-index: 2;
+}
+
+main .projetos #sEsq, main .projetos #sDir{
+    position: relative;
+    z-index: 10;
+    opacity: .7;
+    transition: .2s all ease-in-out;
+}
+main .projetos #sEsq:hover, main .projetos #sDir:hover{
+    opacity: 1;
+}
+
+main .projetos #sEsq{
+    transform: rotateZ(180deg);
+}
+
+main .projetos .botoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+main .projetos .bs{
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    transition: .4s all ease-in-out;
+}
+main .projetos #b1{
+    background-color: rgb(255, 255, 255);
+}
+main .projetos #b2{
+    background-color: #ffffff80;
+}
+
+
+
+/* FOOTER */
+
+.rodape {
+    width: 100vw;
+    height: 200px;
+    background-color: #213886;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 0;
+}
+
+.rodape .texto span{
+    font-size: 2.4rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+}
+
+.rodape .contato{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rodape h2{
+    font-size: 2.8rem;
+    padding: 10px;
+    margin-left: 5rem;
+    font-family: "Poppins";
+}
+
+.rodape .icones{
+    display: grid;
+    grid-template-columns: 163px 90px;
+    grid-template-rows: 55px 55px;
+    width: 150px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.rodape .icones .social{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.4s all ease-out;
+    position: relative;
+    left: 0;
+    cursor: pointer;
+}
+.rodape .icones .esqw:hover{
+    position: relative;
+    left: -2rem;
+}
+.rodape .icones .esqg{
+    width: 163px;
+}
+.rodape .icones .esqg:hover{
+    position: relative;
+    left: -10.0rem;
+    width: 244px;
+}
+.rodape .icones .dir:hover{
+    position: relative;
+    left: -5px;
+    cursor: pointer;
+}
+
+.rodape .icones .social::after{
+    font-size: 1.4rem;
+    padding: 15px 4px;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    position: relative;
+    z-index: -1;
+}
+
+.rodape .icones .rede1:hover::after{
+    content: "(77)99983-1299";
+}
+.rodape .icones .rede2:hover::after{
+    content: "@kaua_41_";
+    left: -92px;
+}
+.rodape .icones .rede3:hover::after{
+    content: "kauavictor259@gmail.com";
+    padding: 20px 15px;
+}
+.rodape .icones .rede4:hover::after{
+    content: "/kauavicto";
+    left: -92px;
+}
+
+.rodape .icones img{
+    width: 30px;
+}
+
+.rodape .social a{
+    padding-right: 95px;
+}
+
+
+/* COPIAR REDES */
+
+#copiar{
+    opacity: 0;
+    cursor: default;
+}
+
+.copiado {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    z-index: 0;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    opacity: 0;
+    border: 1px solid white;
+    transition: .3s all ease-in-out;
+}
+
+@media (max-width: 1400px) {
+    header.container .menu nav ul li a{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1140px) {
+    header.container .menu nav ul li a{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    main .home .texto{
+        font-size: 1.4rem;
+        width: 70%;
+    }
+    main .estudos .texto{
+        font-size: 1.4rem;
+        width: 40%;
+    }
+
+    /* PROJETOS */
+
+    main .projetos .container{
+        display: block;
+    }
+    main .projetos .container .linha{
+        display: none;
+    }
+    main .projetos .texto{
+        font-size: 1.4rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+    /* main .projetos .lista{
+        width: 40%;
+    } */
+}
+
+@media (max-width: 700px) {
+
+    /* MENU */
+    nav{
+        display: none;
+    }
+
+    .Tmenu{
+        width: 30px;
+        height: 23px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .um, .dois, .tres{
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: .3s all ease-in-out;
+    }
+
+    .menu.on{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 25vw;
+        height: 25vh;
+        overflow-x: hidden;
+        margin-right: 0;
+    }
+
+    .menu.on nav{
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+
+    .menu.on nav ul{
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 25vh;
+        width: auto;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu.on nav ul li a{
+        transition: .3s all ease-in-out;
+    }
+
+    .menu.on .Tmenu{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .menu.on .Tmenu .um{
+        transform: rotate(55deg) translate(10px, 5px);
+    }
+    .menu.on .Tmenu .tres{
+        transform: rotate(-55deg) translate(8px, -4px);
+    }
+    .menu.on .Tmenu .dois{
+        opacity: 0;
+    }
+
+    /* SECTIONS */
+
+    main .home, main .estudos, main .projetos, main .servicos{
+        height: 500px;
+    }
+
+    body{
+        height: 2500px;
+    }
+
+    /* PROJETOS */
+
+    main .servicos .container .servico{
+        width: 170px;
+        height: 250px;
+    }
+    main .servicos .container .servico span{
+        font-size: 1.9rem;
+    }
+
+    /* Títulos */
+
+    main h1{
+        text-align: start;
+        font-size: 3.5rem;
+        padding: 3rem;
+    }
+}
