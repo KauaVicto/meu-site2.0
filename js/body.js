@@ -21,7 +21,7 @@ for(let i = 0; i < imgs.length; i++){
             setTimeout(() => {
                 imgs[i].style.height = '893px'
                 imgs[i].style.zIndex = '20'
-                imgs[i].style.left = '-25vw'
+                
                 imgs[i].style.boxShadow = '0px 0px 0px 200vw rgba(0, 0, 0, 0.6)'
             },10)
             
@@ -30,7 +30,6 @@ for(let i = 0; i < imgs.length; i++){
     document.addEventListener('click', () => {
         if(imgs[i].style.height == '893px'){
             imgs[i].style.height = '250px'
-            imgs[i].style.left = '0'
             imgs[i].style.zIndex = '2'
             imgs[i].style.boxShadow = 'none'
         }
