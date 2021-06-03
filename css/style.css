@@ -16,10 +16,10 @@ html{
 }
 
 body{
-    /* background-image: url("../img/paisagem.jpg");
+    background-image: url("../img/paisagem.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed; */
-    height: 500vh;
+    background-attachment: fixed;
+    height: 450vh;
     position: relative;
     min-width: 100vw;
     overflow-x: hidden;
