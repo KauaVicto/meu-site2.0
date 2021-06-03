@@ -16,10 +16,10 @@ html{
 }
 
 body{
-    background-image: url("../img/paisagem.jpg");
+    /* background-image: url("../img/paisagem.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 3300px;
+    background-attachment: fixed; */
+    height: 500vh;
     position: relative;
     min-width: 100vw;
     overflow-x: hidden;
@@ -90,8 +90,11 @@ main h1{
     font-family: 'Poppins', sans-serif;
     font-size: 5rem;
     text-align: center;
-    padding: 50px;
     color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
 } 
 main section{
     width: 100%;
@@ -101,34 +104,60 @@ main .texto{
     text-align: center;
     font-family: "Poppins";
 }
+main .titulo{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
 
 /* HOME */
 
 main .home{
-    margin-top: 100px;
-    height: 700px;
-    background-color: rgba(48, 114, 140, 0.53);
+    height: 100vh;
 }
 
 
+main .home .titulo{
+    background-image: url('../img/paisagem.jpg');
+    height: 50%;
+}
 
 main .home .texto{
-    width: 40%;
-    margin: 0 auto;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 114, 140);
+}
+
+main .home .texto p{
+    width: 60%;
 }
 
 /* SERVIÇOS */
 
 main .servicos{
-    height: 700px;
-    background-color: rgba(6, 42, 64, 0.61);
+    height: 100vh;
+}
+
+main .servicos .titulo h1{
+    color: black;
+}
+
+main .servicos .titulo{
+    background-image: url('../img/servicos.jpg');
+    height: 50%;
 }
 
 main .servicos .container{
     width: 100%;
+    height: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: rgb(6, 42, 64);
 }
 
 main .servicos .container .servico{
@@ -157,15 +186,20 @@ main .servicos .servico span{
 /* ESTUDOS */
 
 main .estudos{
-    height: 700px;
-    background-color: rgba(14, 0, 70, 0.57);
+    height: 100vh;
+}
+
+main .estudos .titulo{
+    background-image: url('../img/estudos.jpg');
+    height: 50%;
 }
 
 main .estudos .container{
-    height: 60%;
+    height: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: rgb(14, 0, 70);
 }
 main .estudos .texto{
     width: 40%;
@@ -187,11 +221,17 @@ main .estudos .linguagens img{
 /* PROJETOS */
 
 main .projetos{
-    height: 700px;
+    height: 100vh;
     background-color: #2E688C;
 }
 
+main .projetos .titulo{
+    background-image: url('../img/projetos.jpg');
+    height: 45%;
+}
+
 main .projetos .container{
+    height: 55%;
     display: flex;
     justify-content: space-around;
     align-items: center;
