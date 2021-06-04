@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="OP=Opera">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide.css">
     <title>Rebb_Diit</title>
 </head>
 <body>
@@ -88,25 +89,71 @@
 
                 <div class="linha"></div>
 
-                <div class="slider">
-                    <div class="slide">
-                        <img src="img/seta.png" alt="seta esquerda" id="sEsq">
-                        <ul class="lista">
-                            <li>
-                                <img src="img/projeto-cardapio1.jpg" alt="Cardápio1" id="img1" class="imagens">
-                            </li>
-                            <li>
-                                <img src="img/projeto-cardapio2.png" alt="Cardápio2" id="img2" class="imagens">
-                            </li>
+                <div class="slide">
+                    <nav class="menu-slide">
+                        <ul>
+                            <li class="design on">DESIGNS</li>
+                            <li class="web">WEB</li>
                         </ul>
-                        <img src="img/seta.png" alt="seta direita" id="sDir">
+                    </nav>
+
+                    <div class="slider">
+                        <div class="proj on">
+                            <!-- botões -->
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                
+                            <!-- images -->
+                            <div class="img first">
+                                <img src="img/projeto-cardapio1.jpg" alt="estudos">
+                            </div>
+                            <div class="img">
+                                <img src="img/projeto-cardapio2.png" alt="estudos">
+                            </div>
+                
+                            <!-- navegação -->
+                            <div class="navegacao">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                            </div>
+
+                            <!-- manual nav -->
+                            <div class="manual">
+                                <label for="radio1" class="manual-btn"></label>
+                                <label for="radio2" class="manual-btn"></label>
+                            </div>
+                        </div>
+
+                        <div class="proj">
+                            <!-- botões -->
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4">
+                
+                            <!-- images -->
+                            <div class="img first">
+                                <img src="img/projetos.jpg" alt="estudos">
+                            </div>
+                            <div class="img">
+                                <img src="img/estudos.jpg" alt="estudos">
+                            </div>
+                
+                            <!-- navegação -->
+                            <div class="navegacao">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                            </div>
+
+                            <!-- manual nav -->
+                            <div class="manual">
+                                <label for="radio3" class="manual-btn"></label>
+                                <label for="radio4" class="manual-btn"></label>
+                            </div>
+                        </div>
+
+                        
                     </div>
-                    <div class="botoes">
-                        <div class="bs" id="b1"></div>
-                        <div class="bs" id="b2"></div>
-                    </div>
-                    
                 </div>
+
             </div>
         </section>
     </main>

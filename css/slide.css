@@ -1,0 +1,138 @@
+.slide{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-slide{
+    width: 100%;
+}
+
+.menu-slide ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.menu-slide ul li{
+    font-size: 2rem;
+    font-family: 'Poppins';
+    padding: 5px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #0D1F2D;
+    transition: .3s all ease;
+}
+
+.menu-slide ul li.on{
+    background-color: #0D1F2D;
+}
+
+.menu-slide ul li:hover{
+    background-color: #0D1F2D;
+}
+
+.slider{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.proj:not(.on){
+    display: none;
+}
+
+.proj.on{
+    width: 500%;
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.proj.on input{
+    display: none;
+}
+
+.proj.on .img{
+    width: 20%;
+    transition: 1s all ease;
+}
+
+.proj.on .img img{
+    width: 100%;
+}
+
+/* manual slide */
+
+.manual{
+    position: absolute;
+    bottom: 10px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual .manual-btn{
+    border: 2px solid #2E688C;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .3s all ease;
+}
+
+.manual .manual-btn:hover{
+    background-color: #2E688C;
+}
+
+.proj.on #radio1:checked ~ .first{
+    margin-left: 0;
+}
+.proj.on #radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+.proj.on #radio3:checked ~ .first{
+    margin-left: 0;
+}
+.proj.on #radio4:checked ~ .first{
+    margin-left: -20%;
+}
+
+/* Automatic */
+
+.navegacao{
+    position: absolute;
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    bottom: 10px;
+}
+
+.navegacao div{
+    border: 2px solid #2E688C;
+    padding: 5px;
+    border-radius: 10px;
+    transition: .3s all ease;
+    margin: 0 10px;
+}
+
+.proj.on #radio1:checked ~ .navegacao .auto-btn1{
+    background-color: #2E688C;
+}
+.proj.on #radio2:checked ~ .navegacao .auto-btn2{
+    background-color: #2E688C;
+}
+
+.proj.on #radio3:checked ~ .navegacao .auto-btn1{
+    background-color: #2E688C;
+}
+.proj.on #radio4:checked ~ .navegacao .auto-btn2{
+    background-color: #2E688C;
+}
