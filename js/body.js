@@ -3,6 +3,7 @@ let show = true
 let web = document.getElementsByClassName('web')
 let design = document.getElementsByClassName('design')
 let radios = document.getElementsByClassName('radio')
+let sele = document.getElementById('sele')
 
 let proj = document.getElementsByClassName('proj')
 
@@ -21,13 +22,15 @@ web[0].addEventListener('click', () => {
 
 function designBtn(){
     design[0].classList.add('on')
-
     web[0].classList.remove('on')
+
+    sele.style.marginRight = '68px'
 }
 function webBtn(){
     design[0].classList.remove('on')
-
     web[0].classList.add('on')
+
+    sele.style.marginRight = '-68px'
 }
 
 
