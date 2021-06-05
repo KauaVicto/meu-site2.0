@@ -79,7 +79,7 @@
 }
 
 .manual .manual-btn{
-    border: 2px solid #2E688C;
+    border: 2px solid #0e0046;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -88,7 +88,7 @@
 }
 
 .manual .manual-btn:hover{
-    background-color: #2E688C;
+    background-color: #0e0046;
 }
 
 .proj.on #radio1:checked ~ .first{
@@ -116,7 +116,7 @@
 }
 
 .navegacao div{
-    border: 2px solid #2E688C;
+    border: 2px solid #0e0046;
     padding: 5px;
     border-radius: 10px;
     transition: .3s all ease;
@@ -124,15 +124,15 @@
 }
 
 .proj.on #radio1:checked ~ .navegacao .auto-btn1{
-    background-color: #2E688C;
+    background-color: #0e0046;
 }
 .proj.on #radio2:checked ~ .navegacao .auto-btn2{
-    background-color: #2E688C;
+    background-color: #0e0046;
 }
 
 .proj.on #radio3:checked ~ .navegacao .auto-btn1{
-    background-color: #2E688C;
+    background-color: #0e0046;
 }
 .proj.on #radio4:checked ~ .navegacao .auto-btn2{
-    background-color: #2E688C;
+    background-color: #0e0046;
 }
