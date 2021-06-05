@@ -81,7 +81,7 @@ setInterval(() => {
         count = 1
     }
     
-}, 60000)
+}, 3500)
 
 /* Abrindo img */
 
