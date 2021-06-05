@@ -18,14 +18,14 @@ list[0].addEventListener('click', () => {
 list[1].addEventListener('click', () => {
     webBtn()
 
-    count = 3
-    radios[2].checked = true
+    count = 4
+    radios[3].checked = true
 })
 
 list[2].addEventListener('click', () => {
     escolBtn()
-    count = 5
-    radios[4].checked = true
+    count = 6
+    radios[5].checked = true
 })
 
 function designBtn(){
@@ -33,7 +33,8 @@ function designBtn(){
     list[1].classList.remove('on')
     list[2].classList.remove('on')
 
-    sele.style.marginRight = '136px'
+    sele.style.marginRight = '139px'
+    sele.style.width = '92px'
     
 }
 function webBtn(){
@@ -41,24 +42,26 @@ function webBtn(){
     list[1].classList.add('on')
     list[2].classList.remove('on')
 
-    sele.style.marginRight = '1px'
+    sele.style.marginRight = '-33px'
+    sele.style.width = '56px'
 }
 function escolBtn(){
     list[0].classList.remove('on')
     list[1].classList.remove('on')
     list[2].classList.add('on')
 
-    sele.style.marginRight = '-136px'
+    sele.style.marginRight = '-170px'
+    sele.style.width = '56px'
 }
 
 
 for(let i = 0;i < radios.length;i++){
     radios[i].addEventListener('click',() => {
-        if(radios[0].checked || radios[1].checked){
+        if(radios[0].checked || radios[1].checked || radios[2].checked){
             designBtn()
-        }else if(radios[2].checked || radios[3].checked){
+        }else if(radios[3].checked || radios[4].checked){
             webBtn()
-        }else if(radios[4].checked || radios[5].checked){
+        }else if(radios[5].checked || radios[6].checked){
             escolBtn()
         }
         count = i + 1
@@ -71,17 +74,17 @@ setInterval(() => {
     document.getElementById('radio' + count).checked = true
     count++
 
-    if(count <= 3){
+    if(count <= 4){
         designBtn()
-    }else if(count <= 5){
+    }else if(count <= 6){
         webBtn()
-    }else if(count < 7){
+    }else if(count < 8){
         escolBtn()
     }else{
         count = 1
     }
     
-}, 3500)
+}, 3000)
 
 /* Abrindo img */
 

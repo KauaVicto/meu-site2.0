@@ -44,7 +44,7 @@
 }
 
 .proj{
-    width: 600%;
+    width: 700%;
     height: 100%;
     display: flex;
     position: relative;
@@ -55,7 +55,7 @@
 }
 
 .proj .img{
-    width: 16.7%;
+    width: 14.28%;
     transition: 1s all ease;
 }
 
@@ -72,21 +72,21 @@
 .manual{
     position: absolute;
     bottom: 10px;
-    width: 16.7%;
+    width: 14.28%;
     display: flex;
     justify-content: center;
 }
 
 .manual #sele{
     content: '';
-    width: 56px;
+    width: 92px;
     height: 20px;
     background-color: rgba(14, 0, 70, 0.582);
     position: absolute;
     z-index: 0;
     top: -3px;
     border-radius: 10px;
-    margin-right: 136px;
+    margin-right: 139px;
     transition: .7s all ease-in-out;
 }
 
@@ -109,19 +109,22 @@
     margin-left: 0;
 }
 .proj #radio2:checked ~ .first{
-    margin-left: -16.7%;
+    margin-left: -14.28%;
 }
 .proj #radio3:checked ~ .first{
-    margin-left: -33.4%;
+    margin-left: -28.57%;
 }
 .proj #radio4:checked ~ .first{
-    margin-left: -50.1%;
+    margin-left: -42.86%;
 }
 .proj #radio5:checked ~ .first{
-    margin-left: -66.8%;
+    margin-left: -57.11%;
 }
 .proj #radio6:checked ~ .first{
-    margin-left: -83.5%;
+    margin-left: -71.4%;
+}
+.proj #radio7:checked ~ .first{
+    margin-left: -85.71%;
 }
 
 /* Automatic */
@@ -130,7 +133,7 @@
     position: absolute;
     z-index: 1;
     display: flex;
-    width: 16.7%;
+    width: 14.28%;
     justify-content: center;
     bottom: 10px;
 }
@@ -161,5 +164,8 @@
     background-color: #FFFFFF;
 }
 .proj.on #radio6:checked ~ .navegacao .auto-btn6{
+    background-color: #FFFFFF;
+}
+.proj.on #radio7:checked ~ .navegacao .auto-btn7{
     background-color: #FFFFFF;
 }
