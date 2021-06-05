@@ -3,6 +3,7 @@ let count = 1
 let list = document.getElementsByClassName('list')
 let radios = document.getElementsByClassName('radio')
 let sele = document.getElementById('sele')
+let imgs = document.getElementsByClassName('imgs')
 
 let proj = document.getElementsByClassName('proj')
 
@@ -80,4 +81,30 @@ setInterval(() => {
         count = 1
     }
     
-}, 3000)
+}, 60000)
+
+/* Abrindo img */
+
+let img = document.createElement('img')
+
+for(let i = 0;i < imgs.length;i++){
+    imgs[i].addEventListener('click', () => {
+
+        img.src = $(imgs[i]).attr("src")
+        
+        document.body.appendChild(img)
+
+        img.style.height = '80vh'
+        img.style.position = 'fixed'
+        img.style.top = '50%'
+        img.style.left = '50%'
+        img.style.transform = 'translate(-50%, -50%)'
+        img.style.opacity = '1'
+        img.style.boxShadow = '0px 0px 0px 200vw rgba(0, 0, 0, 0.6)'
+    })
+}
+
+
+img.addEventListener('click', () => {
+    img.remove()
+})
