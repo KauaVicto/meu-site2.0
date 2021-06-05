@@ -8,21 +8,13 @@ let proj = document.getElementsByClassName('proj')
 
 
 design[0].addEventListener('click', () => {
-    show = true
-    design[0].classList.toggle('on', show)
-
-    show = !show
-    web[0].classList.toggle('on', show)
+    designBtn()
     
     radios[0].checked = true
 })
 
 web[0].addEventListener('click', () => {
-    show = true
-    web[0].classList.toggle('on', show)
-
-    show = !show
-    design[0].classList.toggle('on', show)
+    webBtn()
     
     radios[2].checked = true
 })
