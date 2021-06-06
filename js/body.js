@@ -24,6 +24,7 @@ list[1].addEventListener('click', () => {
 
 list[2].addEventListener('click', () => {
     escolBtn()
+    
     count = 6
     radios[5].checked = true
 })
