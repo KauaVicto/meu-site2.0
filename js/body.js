@@ -84,7 +84,7 @@ setInterval(() => {
         count = 1
     }
     
-}, 3000)
+}, 3500)
 
 /* Abrindo img */
 
@@ -95,22 +95,30 @@ for(let i = 0;i < imgs.length;i++){
 
         img.src = $(imgs[i]).attr("src")
         
-        document.body.appendChild(img)
-
         img.style.height = '80vh'
         img.style.maxWidth = (i == 2) ? '80vh' : '100vw'
         img.style.objectFit = 'cover'
         img.style.position = 'fixed'
         img.style.top = '50%'
         img.style.left = '50%'
+        img.style.border = '50vw solid rgba(0, 0, 0, 0.6)'
         img.style.transform = 'translate(-50%, -50%)'
-        img.style.opacity = '1'
-        img.style.boxShadow = '0px 0px 0px 200vw rgba(0, 0, 0, 0.6)'
-        img.style.zIndex = '10'
+        img.style.opacity = '0'
+        img.style.transition = '.5s all ease'
+        img.style.zIndex = '20'
+        
+        document.body.appendChild(img)
+        setTimeout(() => {
+            img.style.opacity = '1'
+        }, 1)
     })
 }
 
 
 img.addEventListener('click', () => {
-    img.remove()
+    img.style.opacity = '0'
+
+    setTimeout(() => {
+        img.remove()
+    }, 500)
 })
